@@ -1,0 +1,122 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+*{box-sizing:border-box}
+body{
+margin:0;
+background:#f5eee6;
+color:#3d2f24;
+font-family:'Poppins',sans-serif;
+overflow-x:hidden;
+}
+
+.screen{display:none;min-height:100vh;padding:40px 20px;justify-content:center;align-items:center;flex-direction:column}
+.active{display:flex}
+
+#cover{position:relative;overflow:hidden}
+.cover-photo{
+position:absolute;inset:0;width:100%;height:100%;
+object-fit:cover;filter:brightness(.35);
+}
+.cover-photo::after{content:''}
+
+.hero,.card{
+position:relative;
+z-index:2;
+background:rgba(255,255,255,.78);
+backdrop-filter:blur(10px);
+padding:35px;
+border-radius:24px;
+max-width:900px;
+text-align:center;
+box-shadow:0 15px 40px rgba(0,0,0,.15);
+}
+
+.hero h1,.card h1,h2{
+font-family:'Caveat',cursive;
+}
+
+button{
+background:#8b6b4a;
+color:white;
+border:none;
+padding:12px 22px;
+border-radius:30px;
+cursor:pointer;
+transition:.3s;
+}
+button:hover{transform:translateY(-2px)}
+
+.flip{
+width:90%;
+max-width:950px;
+height:280px;
+position:relative;
+transform-style:preserve-3d;
+transition:1s;
+margin:20px 0;
+cursor:pointer;
+perspective:1000px;
+}
+.flip.open{transform:rotateY(180deg)}
+
+.front,.back{
+position:absolute;
+inset:0;
+backface-visibility:hidden;
+border-radius:20px;
+padding:20px;
+}
+
+.front{
+background:#f8f2ea;
+border:2px dashed #c8aa8c;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+font-family:'Caveat',cursive;
+font-size:2rem;
+}
+
+.back{
+transform:rotateY(180deg);
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(130px,1fr));
+gap:12px;
+overflow:auto;
+background:#fffaf5;
+}
+
+.back img{
+width:100%;
+height:150px;
+object-fit:cover;
+padding:8px;
+background:white;
+border-radius:4px;
+box-shadow:0 6px 15px rgba(0,0,0,.15);
+transform:rotate(calc(var(--r) * 1deg));
+}
+
+#musicBtn{
+position:fixed;
+right:20px;
+bottom:20px;
+z-index:99;
+}
+
+.sparkle{
+position:fixed;
+width:6px;
+height:6px;
+border-radius:50%;
+background:#ffffff;
+animation:float 8s linear infinite;
+opacity:.5;
+}
+
+@keyframes float{
+from{transform:translateY(100vh)}
+to{transform:translateY(-120px)}
+}

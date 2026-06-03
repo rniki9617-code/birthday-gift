@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy 25th Birthday, Asawa Ko</title>
+<link rel="stylesheet" href="style_enhanced.css">
+</head>
+<body>
+
+<section class="screen active" id="cover">
+<img src="images/Photo2.jpg" class="cover-photo">
+<div class="hero">
+<h1>Happy 25th Birthday,<br>Asawa Ko</h1>
+<p>a little gift from PJ</p>
+<button onclick="go('letter')">Open My Gift</button>
+</div>
+</section>
+
+<section class="screen" id="letter">
+<div class="card">
+<h1>For You</h1>
+<p>
+Hi, asawa ko. It's finally my most-awaited time of the year. Happiest birthday, pogi kong asawaaaaaaaa. Second birthday mo na na asawa mo ako. HAHAHAHAHAHAHAHAHHAHAHA. I want to celebrate your birthday every year. I know you still have many dreams that you need to fulfill. Huwag mong susukuan 'yon, ha? May mga pangarap ka man na hindi mo nakuha, God always has a reason why He let that happen. Yung plano mo na pag-alis next year, go for it, ha? Huwag mo nang isipin kung paano ako. Malaki na ako, I can handle myself. Tsaka don't just do that for me, ha? Do it also for yourself. Palagi mo pa ring unahin at isipin ang sarili mo. I know you're strong, but you can always vent to me, okay? Hindi masamang mapagod, hindi masamang humingi ng help, at hindi masamang magpahinga. Walang masama roon. Kung hindi mo kaya, let me do that for you. Tsaka let me do things for you. Inaalagaan mo ako, kaya deserve mong alagaan kita pabalik. Let me do wife duties. And you take care of yourself. Kumain ka lagi kung ayaw mong sakalin kita. Spoil yourself too, ha? Kapag meron na ako, saka na ako babawi sa'yo. Thank you for always choosing to fight for this life. Thank you for existing. You are always a blessing to me—a gift from God that I never want to lose. Ang gift ko muna ngayon ay ito at ako. HAHHAHAHHAHAHAHAHHAHA. Happy 25th birthday, asawa ko! I love you so muchieeee 🥹❤️.
+</p>
+<button onclick="go('memories')">Continue</button>
+</div>
+</section>
+
+<section class="screen" id="memories">
+<h2>IKAW TO LAHAT</h2>
+<p>Ijust want you to see how much you grow</p>
+
+<div class="flip" onclick="this.classList.toggle('open')"><div class="front">BABY YOU (baby ko)</div><div class="back" id="g1"></div></div>
+<div class="flip" onclick="this.classList.toggle('open')"><div class="front">BEFORE US (cutie era mo HAHHAHAHAA)</div><div class="back" id="g2"></div></div>
+<div class="flip" onclick="this.classList.toggle('open')"><div class="front">I LOVE THESE PHOTOS THE MOST</div><div class="back" id="g3"></div></div>
+<div class="flip" onclick="this.classList.toggle('open')"><div class="front">STILL MY FAV</div><div class="back" id="g4"></div></div>
+<div class="flip" onclick="this.classList.toggle('open')"><div class="front">OUR PICTURES TOGETHER CAUSE WHY NOT?</div><div class="back" id="g5"></div></div>
+
+<button onclick="go('final')">CLICK PARA MAGING ASAWA MO KO FOREVER</button>
+</section>
+
+<section class="screen" id="final">
+<div class="card">
+<h1>Happy 25th Birthday, Asawa Ko</h1>
+<p>
+No matter where life takes you, no matter how many dreams you chase,
+I will always be cheering for you.
+<br><br>
+Thank you for every laugh, every effort, for waiting,
+and every moment you choose us.
+<br><br>
+You will always be my favorite person,
+my safest place, and one of the greatest blessings God has given me.
+<br><br>
+Here's to more birthdays and more memories together.
+</p>
+<h2>I love you always, in all ways.</h2>
+<p>— PJ 🤎</p>
+<button onclick="go('cover')">Replay</button>
+</div>
+</section>
+
+<audio id="music" loop>
+<source src="Until I Found You.mp3">
+</audio>
+
+<button id="musicBtn">♪</button>
+<script src="script_enhanced.js"></script>
+</body>
+</html>
